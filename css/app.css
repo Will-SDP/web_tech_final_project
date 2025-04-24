@@ -1,0 +1,21 @@
+/* https://flatuicolors.com/palette/cn */
+:root {
+    --color-dark: #2f3542;
+    --color-light: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0 0 20px 0;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+nav .fa-bars {
+    margin:14px 16px;
+    
+}
