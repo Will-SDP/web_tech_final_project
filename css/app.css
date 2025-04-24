@@ -4,38 +4,160 @@
     --color-light: #ffffff;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
+
+.flex-container-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 nav {
-    margin: 0 0 20px 0;
     background-color: var(--color-dark);
     color: var(--color-light);
 }
 
-nav .fa-bars {
-    margin:14px 16px;
-    
-}
- /* TODO work out how not to repeat this  */
-.fa-times {
-    margin:14px 16px;
+nav .fa {
+    margin: 14px 16px;
+
 }
 
-.hide {
-    display: none;
+.nav-link {
+    color: var(--color-light);
+}
+
+/* TODO work out how not to repeat this  */
+.fa-times {
+    margin: 14px 16px;
+}
+
+#search {
+    width: 100%;
+    background-color: var(--color-dark);
+    margin: 0 0 20px 0;
+}
+
+#search input[type="text"] {
+    width: 90%;
+    margin: 0 auto;
+    margin: 14px 16px;
+    height: 60px;
+    border-radius: 25px;
+    border: none;
 }
 
 #menu {
-    width: 100%; 
+    width: 100%;
     height: 100%;
     background-color: var(--color-dark);
     color: var(--color-light);
     z-index: 10;
     position: fixed;
     top: 0;
+}
+
+#menu a {
+    display: block;
+    margin: 8px 16px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: auto;
+}
+main > div {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+/* Utility classes */
+
+
+.container {
+    margin: 0 auto;
+}
+
+
+
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+/* Responsive styling for the menu elemetns in the navbar */
+@media only screen and (max-width: 768px) {
+    #menu-centre a  {  
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    #menu-left {
+        display: none;
+    }
+    #menu-centre a, h1  {  
+        display: inline-block;
+        margin: 14px 16px;
+    }
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    .main-content {
+        grid-template-columns: auto auto;
+    }
     
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    .main-content {
+        grid-template-columns: auto auto auto;
+    }
+    
+}
+
+/* Extra extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.hide {
+    display: none;
 }
