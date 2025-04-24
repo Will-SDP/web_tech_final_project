@@ -4,9 +4,10 @@
     --color-light: #ffffff;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 nav {
@@ -17,5 +18,24 @@ nav {
 
 nav .fa-bars {
     margin:14px 16px;
+    
+}
+ /* TODO work out how not to repeat this  */
+.fa-times {
+    margin:14px 16px;
+}
+
+.hide {
+    display: none;
+}
+
+#menu {
+    width: 100%; 
+    height: 100%;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    z-index: 10;
+    position: fixed;
+    top: 0;
     
 }
