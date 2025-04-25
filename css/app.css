@@ -2,7 +2,6 @@
 :root {
     --color-dark: #2f3542;
     --color-light: #ffffff;
-    --standard-margin: 14px 16px;
 }
 
 html,
@@ -14,6 +13,10 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+}
+
+nav div {
+    border: 2px solid red;
 }
 
 
@@ -28,30 +31,27 @@ nav {
     color: var(--color-light);
 }
 
-nav .fa {
-    margin: var(--standard-margin);
-
-}
-
 .nav-link {
     color: var(--color-light);
 }
 
-/* TODO work out how not to repeat this  */
-.fa-times {
-    margin: var(--standard-margin);
+.fa,
+#menu-left h1,
+.nav-link,
+.search-bar {
+    margin: 14px 16px;
 }
 
 #search {
     width: 100%;
     background-color: var(--color-dark);
     margin: 0 0 20px 0;
+    /* Centre the search bar while still being able to apply consistent margin. */
+    text-align: center;
 }
 
 #search input[type="text"] {
     width: 90%;
-    margin: 0 auto;
-    margin: var(--standard-margin);
     height: 60px;
     border-radius: 25px;
     border: none;
@@ -76,13 +76,15 @@ nav .fa {
     display: grid;
     grid-template-columns: auto;
 }
-main > div {
+
+main>div {
     background-color: #f1f1f1;
     border: 1px solid black;
     padding: 10px;
     font-size: 30px;
     text-align: center;
-  }
+}
+
 /* Utility classes */
 
 
@@ -109,9 +111,12 @@ main > div {
 /* Medium devices (landscape tablets, 768px and down) */
 /* Responsive styling for the menu elemetns in the navbar */
 @media only screen and (max-width: 768px) {
-    #menu-centre a  {  
+    /* #menu-centre a {
         display: none;
-    }
+    } */
+    nav > div:nth-child(2) a {
+        display: none;
+     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -119,12 +124,13 @@ main > div {
     .container {
         max-width: 720px;
     }
-    #menu-left {
-        display: none;
-    }
-    #menu-centre a, h1  {  
+
+     nav > div:nth-child(2) a, h1 {
         display: inline-block;
-        margin: var(--standard-margin);
+     }
+
+    nav > div:first-child {
+        display: none;
     }
 }
 
@@ -135,10 +141,11 @@ main > div {
     .container {
         max-width: 960px;
     }
+
     .main-content {
         grid-template-columns: auto auto;
     }
-    
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -146,10 +153,11 @@ main > div {
     .container {
         max-width: 1140px;
     }
+
     .main-content {
         grid-template-columns: auto auto auto;
     }
-    
+
 }
 
 /* Extra extra large devices (large laptops and desktops, 1400px and up) */
@@ -158,6 +166,10 @@ main > div {
         max-width: 1320px;
     }
 }
+
+/* .standard-margin {
+    margin: 14px 16px;
+} */
 
 .hide {
     display: none;
