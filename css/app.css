@@ -2,6 +2,7 @@
 :root {
     --color-dark: #2f3542;
     --color-light: #ffffff;
+    --standard-margin: 14px 16px;
 }
 
 html,
@@ -28,7 +29,7 @@ nav {
 }
 
 nav .fa {
-    margin: 14px 16px;
+    margin: var(--standard-margin);
 
 }
 
@@ -38,7 +39,7 @@ nav .fa {
 
 /* TODO work out how not to repeat this  */
 .fa-times {
-    margin: 14px 16px;
+    margin: var(--standard-margin);
 }
 
 #search {
@@ -50,7 +51,7 @@ nav .fa {
 #search input[type="text"] {
     width: 90%;
     margin: 0 auto;
-    margin: 14px 16px;
+    margin: var(--standard-margin);
     height: 60px;
     border-radius: 25px;
     border: none;
@@ -123,7 +124,7 @@ main > div {
     }
     #menu-centre a, h1  {  
         display: inline-block;
-        margin: 14px 16px;
+        margin: var(--standard-margin);
     }
 }
 
