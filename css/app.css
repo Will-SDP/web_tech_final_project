@@ -15,10 +15,6 @@ body {
     font-style: normal;
 }
 
-nav div {
-    border: 2px solid red;
-}
-
 
 .flex-container-menu {
     display: flex;
@@ -83,6 +79,10 @@ main>div {
     padding: 10px;
     font-size: 30px;
     text-align: center;
+}
+
+.fa-star {
+    color: #ffa502;
 }
 
 /* Utility classes */

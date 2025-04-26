@@ -15,6 +15,7 @@
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/form.css">
     <title>Document</title>
 </head>
 
@@ -43,22 +44,51 @@
         <a href="add.html" class="nav-link">Add</a>
     </div>
     <div class="container">
-        <header>
-            <h2>Web Tech Module, final project.</h2>
-            <p>
-                This project aims to show case the html, css and javascript we have learnt over the previous 6 weeks.
-            </p>
-            <p>
-
-            </p>
-        </header>
-        <main class="main-content">
-        </main>
-        <button id="btnNext" onclick="getData()">Load more</button>
-        <footer></footer>
+        <form action="view.html" method="GET">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" name="Small_rodent_hunting">
+                    <label for="Small_rodent_hunting">Small rodent hunting</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="lapdog">
+                    <label for="lapdog">lapdog</label>
+                </div>
+            </div>
+            <div>
+                <label for="breed_group">Breed Group</label>
+                <select name="breed_group" id="">
+                    <option value="sporting">Sporting</option>
+                    <option value="terrier">Terrier</option>
+                    <option value="non_sporting">Non Sporting</option>
+                    <option value="mixed">Mixed</option>
+                    <option value="hound">Hound</option>
+                    <option value="herding">Herding</option>
+                    <option value="working">Working</option>
+                </select>
+            </div>
+            <div>
+                <label for="temperament">Temperament</label>
+                <textarea name="temperament" id="temperament"></textarea>
+            </div>
+            <div>
+                <label for="lifespan">Lifespan</label>
+                <input type="range">
+            </div>
+            <div>
+                <label for="picture">Image</label>
+                <input type="file" name="picture" accept="image/png, image/jpeg">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </div>
     <script src="js/app.js"></script>
-    <script src="js/index.js"></script>
 </body>
 
 </html>

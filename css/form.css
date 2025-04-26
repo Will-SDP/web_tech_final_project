@@ -1,0 +1,39 @@
+form {
+    margin: 10px;
+    color: #000;
+}
+
+form * {
+    padding: 5px;
+}
+
+form > div {
+    margin:10px;
+}
+
+form > div > label {
+    display: block;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  min-width: 250px;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input::file-selector-button {
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
