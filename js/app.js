@@ -16,14 +16,16 @@ function addCard(title, image, text, id) {
         strFavorites = `<button onclick="addFavorite('${title}', '${id}', this)">Add to Favourites</button>`
     }    
     const cardHtml = `
-        <div>
+        <div class="card">
             <div>
                 <img src="${image}" style="width:100%">
                 <div>
                     <h4>${title}</h4>
                     <p>${text}</p>
-                    <a href="view.html?id=${id}" >View More</a>
-                    ${strFavorites}
+                    <div class="card-footer">
+                        <a href="view.html?id=${id}" >View More</a>
+                        ${strFavorites}
+                    </div>    
                 </div>
             </div>
         </div>    
@@ -47,7 +49,10 @@ async function getDog(id, context=0) {
         $("#bred_for").text(dog.bred_for)
         $("#life_span").text(dog.life_span)
     } else {
-        addCard(dog.name, dog.image.url, dog.text, dog.id)
+        addCard(dog.name, dog.image.url, dog.temperament, dog.id)
     }
 
 }
+
+
+$("#favourites").text("Favourites (" + localStorage.length + ")")
