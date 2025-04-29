@@ -13,7 +13,7 @@ function addCard(title, image, text, id) {
     if(localStorage.getItem(title)){
         strFavorites = `<span>Favorite <i class="fa fa-star" aria-hidden="true"></i></span>`
     } else {
-        strFavorites = `<button onclick="addFavorite('${title}', '${id}', this)">Add to Favorites</button>`
+        strFavorites = `<button onclick="addFavorite('${title}', '${id}', this)">Add to Favourites</button>`
     }    
     const cardHtml = `
         <div>
@@ -22,7 +22,7 @@ function addCard(title, image, text, id) {
                 <div>
                     <h4>${title}</h4>
                     <p>${text}</p>
-                    <a href="view.html?id=${id}" >See Profile</a>
+                    <a href="view.html?id=${id}" >View More</a>
                     ${strFavorites}
                 </div>
             </div>

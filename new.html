@@ -27,7 +27,7 @@
         <div>
             <h1>Title</h1>
             <a href="index.html" class="nav-link">Home</a>
-            <a href="favorites.html" class="nav-link">Favorites</a>
+            <a href="favorites.html" class="nav-link">Favourites</a>
             <a href="add.html" class="nav-link">Add</a>
         </div>
         <div>
@@ -50,6 +50,15 @@
                 <input type="text" name="name">
             </div>
             <div>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label>Bred for</label>
+                <div>
+                    <input type="checkbox" name="herding">
+                    <label for="herding">Herding</label>
+                </div>
                 <div>
                     <input type="checkbox" name="Small_rodent_hunting">
                     <label for="Small_rodent_hunting">Small rodent hunting</label>
@@ -73,11 +82,7 @@
             </div>
             <div>
                 <label for="temperament">Temperament</label>
-                <textarea name="temperament" id="temperament"></textarea>
-            </div>
-            <div>
-                <label for="lifespan">Lifespan</label>
-                <input type="range">
+                <textarea name="temperament" id="temperament" maxlength="500"></textarea>
             </div>
             <div>
                 <label for="picture">Image</label>

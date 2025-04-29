@@ -18,6 +18,7 @@ form > div > label {
 input[type="text"],
 input[type="submit"],
 input[type="file"],
+input[type="email"],
 select,
 textarea {
   width: 100%;

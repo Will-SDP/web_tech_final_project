@@ -1,11 +1,7 @@
 import requests
- 
-import requests
 
 url = "https://api.freeapi.app/api/v1/public/dogs"
-
 querystring = {"page":"1","limit":"200"}
-
 headers = {"accept": "application/json"}
 
 response = requests.get(url, headers=headers, params=querystring)
