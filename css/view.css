@@ -2,7 +2,8 @@ img {
     width: 100%;
     margin: 0; 
     padding: 0;
-    max-height: 50%;
+    max-height: 70%;
     object-fit: cover;
     object-position: top;
 }
+
