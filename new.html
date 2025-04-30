@@ -16,7 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/form.css">
-    <title>Document</title>
+    <title>Dog | Finder</title>
 </head>
 
 <body>
@@ -25,23 +25,24 @@
             <i class="fa fa-bars fa-2x" aria-hidden="true" onclick="toggle_element('menu')"></i>
         </div>
         <div>
-            <h1>Title</h1>
+            <h1>Dogs!</h1>
             <a href="index.html" class="nav-link">Home</a>
-            <a href="favorites.html" class="nav-link">Favourites</a>
-            <a href="add.html" class="nav-link">Add</a>
+            <a href="favorites.html" class="nav-link" id="favourites">Favourites</a>
+            <a href="new.html" class="nav-link">Add</a>
         </div>
         <div>
             <i class="fa fa-search fa-2x" aria-hidden="true" onclick="toggle_element('search')"></i>
         </div>
     </nav>
     <section id="search" class="hide">
-        <input type="text" class="search-bar">
+        <input id="query" type="text" class="search-bar">
+        <button id="searchBtn" type="button">Search</button>
     </section>
     <div id="menu" class="hide">
         <i class="fa fa-times fa-2x" aria-hidden="true" onclick="toggle_element('menu')"></i>
         <a href="index.html" class="nav-link">Home</a>
         <a href="favorites.html" class="nav-link">Favorites</a>
-        <a href="add.html" class="nav-link">Add</a>
+        <a href="new.html" class="nav-link">Add</a>
     </div>
     <div class="container">
         <form action="view.html" method="GET">

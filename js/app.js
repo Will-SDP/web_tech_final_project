@@ -43,7 +43,7 @@ function addCard(title, image, text, id) {
             <div>
                 <img src="${image}" style="width:100%" alt="Picture of a dog (${title})">
                 <div>
-                    <h4>${title}</h4>
+                    <h3>${title}</h3>
                     <p>${text}</p>
                     <div class="card-footer">
                         <a href="view.html?id=${id}" >View More</a>
