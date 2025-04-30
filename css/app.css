@@ -47,10 +47,16 @@ nav {
 }
 
 #search input[type="text"] {
-    width: 90%;
-    height: 60px;
+    width: 60%;
+    height: 40px;
     border-radius: 25px;
     border: none;
+    display: inline-block;
+}
+
+#searchBtn {
+    border-radius: 25px;
+    height: 40px;
 }
 
 #menu {
@@ -104,6 +110,20 @@ main > div img {
 
 .fa-star {
     color: #ffa502;
+}
+
+.card a, button {
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.loader {
+    display: block;
+    width: 80%;
+    margin: 16px auto;
 }
 
 /* Utility classes */

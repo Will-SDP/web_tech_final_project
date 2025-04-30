@@ -1,3 +1,26 @@
+let nextPage = 1 
+
+async function getData(query='') {
+    $('#content').empty()
+    const url = `https://api.freeapi.app/api/v1/public/dogs?page=${nextPage}&limit=25&query=${query}`;
+    const options = {method: 'GET', headers: {accept: 'application/json'}};
+    let result = await fetch(url, options);
+    let data = await result.json();
+    console.log(data)
+    if(data.totalItems === 0){
+        $('.main-content').append("<p>No results found</p>");
+    } else {
+        loadData(data['data']['data'])
+    }
+}
+
+function loadData(data){
+    for (let i = 0; i < data.length; i++) {
+        addCard(data[i].name, data[i].image.url , data[i].temperament, data[i].id)
+      }
+}
+
+
 function toggle_element(element){
     document.getElementById(element).classList.toggle('hide')
 }
@@ -18,7 +41,7 @@ function addCard(title, image, text, id) {
     const cardHtml = `
         <div class="card">
             <div>
-                <img src="${image}" style="width:100%">
+                <img src="${image}" style="width:100%" alt="Picture of a dog (${title})">
                 <div>
                     <h4>${title}</h4>
                     <p>${text}</p>
@@ -54,5 +77,10 @@ async function getDog(id, context=0) {
 
 }
 
-
-$("#favourites").text("Favourites (" + localStorage.length + ")")
+$(document).ready(function(){
+    $("#favourites").text("Favourites (" + localStorage.length + ")")
+    $("#searchBtn").click(function(){   
+        $(".main-content").empty()    
+        getData($("#query").val())
+    })
+})
